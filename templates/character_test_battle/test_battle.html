@@ -8,7 +8,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    모의전투 페이지
+  <body class="parent">
+    <div class="main-container">
+      <div class="title-container">
+        <div class="main-title">모의 전투</div>
+        <div class="sub-title">두 캐릭터의 모의 전투를 해보세요.</div>
+      </div>
+      <div class="input-container">
+        <div class="input-title-container">
+          <div class="input-title">캐릭터 정보 1</div>
+          <div><button class="input-btn">불러오기</button></div>
+        </div>
+        <div class="input-main-container">
+          <div class="pd-10">
+            <input
+              class="input-box input-name"
+              type="text"
+              required
+              placeholder="캐릭터 이름"
+            />
+          </div>
+          <div class="pd-10">
+            <input
+              class="input-box input-content"
+              type="text"
+              required
+              placeholder="캐릭터 정보"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="input-container">
+        <div class="input-title-container">
+          <div class="input-title">캐릭터 정보 2</div>
+          <div><button class="input-btn">불러오기</button></div>
+        </div>
+        <div class="input-main-container">
+          <div class="pd-10">
+            <input
+              class="input-box input-name"
+              type="text"
+              required
+              placeholder="캐릭터 이름"
+            />
+          </div>
+          <div class="pd-10">
+            <input
+              class="input-box input-content"
+              type="text"
+              required
+              placeholder="캐릭터 정보"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mg-10"><button class="battle-btn">전투 시작</button></div>
+      <div class="result-container">
+        <div class="title-container">
+          <div class="sub-title">최근 배틀 결과</div>
+          <div class="input-title-container pd-10">
+            <div class="result-text1">박명수</div>
+            <div>VS</div>
+            <div class="result-text2">유재석</div>
+          </div>
+        </div>
+        <div class="result-content-container">
+          <div class="result-content pd-10">
+            유재석은 박명수에게 1인자의 위엄으로 절체절명의 위기를 선보였다.
+            하지만 박명수가 2인자의 능력으로 10년에 한번 1인자를 이기는 능력을
+            발동해 유재석을 가뿐하게 압도했다.
+          </div>
+          <div class="parent">
+            <div class="pd-10">🎉</div>
+            <div class="result-name">박명수 승리!</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

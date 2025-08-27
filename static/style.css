@@ -1,3 +1,94 @@
 body {
-  background-color: rgb(85, 95, 106);
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 600px;
+  height: 1200px;
+  background-color: rgb(103, 103, 103);
+  margin: 40px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.main-title {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.sub-title {
+  margin: 10px;
+}
+
+.input-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-container {
+  margin: 5px;
+  border: 1px white solid;
+  border-radius: 10px;
+  height: 250px;
+  padding: 20px;
+}
+
+.input-box {
+  width: 100%;
+  background-color: rgb(125, 125, 125);
+  border-radius: 5px;
+  color: white;
+}
+
+.input-name {
+  height: 30px;
+}
+
+.input-content {
+  height: 150px;
+}
+
+.input-box::placeholder {
+  color: lightgray;
+}
+
+.pd-10 {
+  padding: 10px;
+}
+
+.battle-btn {
+  width: 100%;
+}
+
+.mg-10 {
+  margin: 10px;
+}
+
+button {
+  color: white;
+  background-color: gray;
+  border-radius: 10px;
+  height: 25px;
+}
+
+.result-container {
+  border-radius: 10px;
+  border: 1px white solid;
+}
+
+.input-btn {
+  border-radius: 5px;
+  height: 25px;
+  border: none;
+}
+
+.result-name {
+  color: rgb(240, 110, 110);
 }
