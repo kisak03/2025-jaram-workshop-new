@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("character test battle page")
+    return render(request, "character_test_battle/test_battle.html")
