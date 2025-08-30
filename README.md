@@ -1,5 +1,8 @@
 # 2025년 JARAM 워크샵 대체과제
-<img width="341" height="462" alt="screenshot" src="https://github.com/user-attachments/assets/1a48c6ba-41ad-4c6e-9cc3-aad3aa4408a0" />
+<p align="center">
+   <img width="341" height="462" alt="screenshot" src="https://github.com/user-attachments/assets/1a48c6ba-41ad-4c6e-9cc3-aad3aa4408a0" />
+</p>
+
 
 https://github.com/user-attachments/assets/4ed3641e-34cd-4dcc-8c8e-7faef703b6d9
 
