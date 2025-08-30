@@ -1,4 +1,7 @@
 # 2025년 JARAM 워크샵 대체과제
+<img width="341" height="462" alt="screenshot" src="https://github.com/user-attachments/assets/1a48c6ba-41ad-4c6e-9cc3-aad3aa4408a0" />
+
+https://github.com/user-attachments/assets/4ed3641e-34cd-4dcc-8c8e-7faef703b6d9
 
 이 프로젝트는 [텍스트 배틀](https://plan9.kr/battle/#test) 게임 사이트의 모의 배틀 부분을 클론코딩한 웹 사이트입니다.  
 사용자는 캐릭터의 이름과 캐릭터의 설명을 적을 수 있습니다. 이 때 캐릭터의 설명은 100자 이내로만 적을 수 있습니다.  
