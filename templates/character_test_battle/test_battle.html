@@ -22,7 +22,8 @@
               <div class="input-title">캐릭터 정보 1</div>
               <div>
                 <button class="input-btn" type="button" onclick="saveCharacter('character1')">저장하기</button>
-                <button class="input-btn" type="button">불러오기</button>
+                <select name="character1_select"></select>
+                <button class="input-btn" type="button" onclick="loadCharacter('character1')">불러오기</button>
               </div>
             </div>
             <div class="input-main-container">
@@ -51,7 +52,8 @@
               <div class="input-title">캐릭터 정보 2</div>
               <div>
                 <button class="input-btn" type="button" onclick="saveCharacter('character2')">저장하기</button>
-                <button class="input-btn" type="button">불러오기</button>
+                <select name="character2_select"></select>
+                <button class="input-btn" type="button" onclick="loadCharacter('character2')">불러오기</button>
               </div>
             </div>
             <div class="input-main-container">
@@ -99,6 +101,12 @@
     </div>
   </body>
 </html>
+
+{% if user.is_authenticated %}
+<script>
+  setCharacterSelect()
+</script>
+{% endif %}
 
 {% if battle_result %}
 <script>

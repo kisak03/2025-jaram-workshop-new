@@ -45,8 +45,6 @@ function saveCharacter(character) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data.result)
-
         if (data.result === "ok") {
             alert("저장 완료");
         } else if (data.result === "login required") {
@@ -55,5 +53,51 @@ function saveCharacter(character) {
         } else {
             alert("저장 실패");
         }
+
+        setCharacterSelect();
     });
+}
+
+function setCharacterSelect() {
+    let selects = []
+    selects.push(document.querySelector('select[name="character1_select"]'));
+    selects.push(document.querySelector('select[name="character2_select"]'));
+    const csrftoken = getCookie('csrftoken');
+
+    fetch('api/get_characters/', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        selects.forEach(select => {
+            select.innerHTML = "";
+            data.characters.forEach(character => {
+                const option = document.createElement('option');
+                option.value = character.id;
+                option.textContent = character.name;
+                select.appendChild(option);
+            });
+        });
+    });
+}
+
+function loadCharacter(character) {
+    const select = document.querySelector(`select[name="${character}_select"]`);
+    const characterName = select.value;
+    fetch(`/api/get_character/?id=${encodeURIComponent(characterName)}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+
+            if (data.name && data.text) {
+                document.querySelector(`input[name="${character}_name"]`).value = data.name;
+                document.querySelector(`input[name="${character}_text"]`).value = data.text;
+            } else {
+                alert("캐릭터 정보를 찾을 수 없음");
+            }
+        });
 }
