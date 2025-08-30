@@ -8,3 +8,52 @@ function setCharacterText(data) {
     document.querySelector('input[name="character2_name"]').value = data.character2_name;
     document.querySelector('input[name="character2_text"]').value = data.character2_text;
 }
+
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+function saveCharacter(character) {
+    let characterNameTag = character + "_name"
+    let characterTextTag = character + "_text"
+    const name = document.querySelector(`input[name="${characterNameTag}"]`).value;
+    const text = document.querySelector(`input[name="${characterTextTag}"]`).value;
+    if (name === "" || text === "") {
+        alert("내용을 입력해주세요")
+        return
+    }
+    const csrftoken = getCookie('csrftoken');
+
+    fetch('api/save_character/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken
+        },
+        body: JSON.stringify({ name, text })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.result)
+
+        if (data.result === "ok") {
+            alert("저장 완료");
+        } else if (data.result === "login required") {
+            alert("로그인 필요")
+            window.location.href = "/common/login"
+        } else {
+            alert("저장 실패");
+        }
+    });
+}
