@@ -21,13 +21,18 @@ uv pip install -r requirements.txt
 # .env file
 GEMINI_API_KEY=<API KEY>
 ```
-5. Django 서버 시작
+5. 데이터베이스 생성
+```
+python manage.py migrate
+```
+6. Django 서버 시작
 ```
 python manage.py runserver
 ```
-6. 웹사이트에 접속해 두 캐릭터의 이름과 100자 이내의 설명을 입력한 뒤 "전투 시작" 버튼 클릭
-7. Gemini가 캐릭터의 설명을 바탕으로 전투를 진행한 후 전투의 결과와 해설을 생성하여 보여줌
-8. 입력한 캐릭터 내용을 저장하거나 불러올 수 있음 (저장, 불러오기 기능은 로그인 필요)
+7. 웹사이트에 접속해 두 캐릭터의 이름과 100자 이내의 설명을 입력한 뒤 "전투 시작" 버튼 클릭
+8. Gemini가 캐릭터의 설명을 바탕으로 전투를 진행한 후 전투의 결과와 해설을 생성하여 보여줌
+9. 입력한 캐릭터 내용을 저장하거나 불러올 수 있음 (저장, 불러오기 기능은 로그인 필요)
+   - 회원가입, 로그인 : "<서버 주소>/common"에서 가능
 
 ## 주요 구현 기능
 
@@ -41,3 +46,7 @@ python manage.py runserver
 - Gemini API (AI 텍스트 생성)
 - HTML/CSS/JavaScript
 - SQLite
+
+## 프로젝트 참여 인원
+- 38기 조인준
+- 38기 김이삭
